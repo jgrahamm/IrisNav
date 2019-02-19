@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home_button"
+    android:title="Home"
+    android:titleCondensed="H"
+    android:icon="@drawable/ic_action_home" />
+
+    <item android:id="@+id/iris_button"
+        android:title="Iris"
+        android:titleCondensed="I"
+        android:icon="@drawable/ic_action_iris" />
+
+    <item android:id="@+id/wl_button"
+        android:title="WList"
+        android:titleCondensed="W"
+        android:icon="@drawable/ic_action_wl" />
+</menu>
