@@ -21,6 +21,7 @@ public class BaseActivity extends AppCompatActivity {
 
     private HomeFragment homeFragment;
     private IrisFragment irisFragment;
+    private WlFragment wlFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class BaseActivity extends AppCompatActivity {
 
         homeFragment = new HomeFragment();
         irisFragment = new IrisFragment();
+        wlFragment = new WlFragment();
 
         mBottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         mBottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,6 +68,9 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.iris_button:
                 frag = irisFragment;
                 break;
+            case R.id.wl_button:
+                frag = wlFragment;
+
         }
 
         if (frag != null) {
