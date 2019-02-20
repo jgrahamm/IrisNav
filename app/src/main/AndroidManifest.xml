@@ -8,13 +8,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light" >
-
         <activity android:name="com.example.irisnav.BaseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:label="@string/app_name" android:name=".CollectActivity"/>
     </application>
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.irisnav;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -20,7 +21,7 @@ public class BaseActivity extends AppCompatActivity {
     private FragmentManager mFragmentManager;
 
     private HomeFragment homeFragment;
-    private IrisFragment irisFragment;
+    //private IrisFragment irisFragment;
     private WlFragment wlFragment;
 
     @Override
@@ -29,7 +30,7 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.base_activity_layout);
 
         homeFragment = new HomeFragment();
-        irisFragment = new IrisFragment();
+        //irisFragment = new IrisFragment();
         wlFragment = new WlFragment();
 
         mBottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -66,7 +67,10 @@ public class BaseActivity extends AppCompatActivity {
                 frag = homeFragment;
                 break;
             case R.id.iris_button:
-                frag = irisFragment;
+                //frag = irisFragment;
+                Intent myIntent = new Intent(this, CollectActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                this.startActivity(myIntent);
                 break;
             case R.id.wl_button:
                 frag = wlFragment;
@@ -79,7 +83,6 @@ public class BaseActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.fragment_container, frag);
             fragmentTransaction.commit();
         }
-        Log.d("BASEACTIVITY", "fragment: " + frag.toString());
 
     }
 }
